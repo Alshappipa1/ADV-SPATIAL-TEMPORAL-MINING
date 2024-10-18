@@ -6,7 +6,7 @@ from ntu_skeleton_graph import get_normalized_adjacency_matrix
 # the Path to dataset (NTU RGB+D)
 data_path = '/home/adel-h/Downloads/nturgbd_skeletons_s001_to_s017/nturgb+d_skeletons'
 
-# Load the dataset
+# Load the dataset(test)
 skeleton_data = load_skeleton_data(data_path)
 
 # Convert to PyTorch tensor for passing into GCN model for training (for now just for practice)

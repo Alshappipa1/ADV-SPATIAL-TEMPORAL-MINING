@@ -14,8 +14,7 @@ inward_ori_index = [
     (14, 13), (15, 14), (16, 15), (17, 1), (18, 17), (19, 18),
     (20, 19), (22, 23), (23, 8), (24, 25), (25, 12)
 ]
-
-# Create inward and outward edges
+# Create inward and outward edges the same as ST-GCN
 inward = [(i - 1, j - 1) for (i, j) in inward_ori_index]
 outward = [(j, i) for (i, j) in inward]
 neighbor = inward + outward
@@ -35,7 +34,7 @@ def normalize_adjacency_matrix(A):
     D_inv = np.linalg.inv(D)        # Inverse degree matrix
     return np.dot(D_inv, A)
 
-# Create and normalize the adjacency matrix
+# normalize and converts to PyTorch tensor 
 def get_normalized_adjacency_matrix():
     A = get_adjacency_matrix()
     A_norm = normalize_adjacency_matrix(A)
