@@ -5,7 +5,7 @@ import os
 def read_skeleton_file(file_path):
     with open(file_path, 'r') as f:
         skeleton_data = f.readlines()
-    return np.random.rand(3, 50, 25, 2) #random values
+    return np.random.rand(3, 50, 25, 2) #random values for testing
 
 
 # Load all skeleton files in the specified directory: need more works

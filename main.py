@@ -13,7 +13,7 @@ skeleton_data = load_skeleton_data(data_path)
 skeleton_data_tensor = torch.tensor(skeleton_data, dtype=torch.float32)
 skeleton_data_tensor = skeleton_data_tensor.mean(dim=-1)  
 
-# Get the normalized adjacency matrix after degree matrix
+# Get the normalized adjacency matrix after degree matrix(D)
 A = get_normalized_adjacency_matrix()
 
 print(A.shape) #25 joints, size for the adjacency matrix

@@ -2,6 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
+# this code for just undrestanding Graph Convolutional Network (GCN) for processing spatio-temporal data that we will use in this project
 #------------------------- This part of the code is just for practice for now --------------------------------------------------
 
 # Define 1st GCN layer to capture the spatial relationships between joints ()
