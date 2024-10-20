@@ -30,7 +30,7 @@ def get_adjacency_matrix():
 
 # normalize the adjacency matrix
 def normalize_adjacency_matrix(A):
-    D = np.diag(np.sum(A, axis=1))  # Degree matrix
+    D = np.diag(np.sum(A, axis=1))  # Degree matrix (D)
     D_inv = np.linalg.inv(D)        # Inverse degree matrix
     return np.dot(D_inv, A)
 
