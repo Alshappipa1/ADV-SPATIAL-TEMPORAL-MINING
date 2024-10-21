@@ -1,3 +1,5 @@
+#The orginal code at https://github.com/wanjinchang/st-gcn
+
 import numpy as np
 import torch
 
@@ -34,7 +36,7 @@ def normalize_adjacency_matrix(A):
     D_inv = np.linalg.inv(D)        # Inverse degree matrix
     return np.dot(D_inv, A)
 
-# normalize and converts to PyTorch tensor 
+# normalize and converts to PyTorch tensor for GCN
 def get_normalized_adjacency_matrix():
     A = get_adjacency_matrix()
     A_norm = normalize_adjacency_matrix(A)
